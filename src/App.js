@@ -2,6 +2,8 @@ import { useReducer, useState } from "react";
 import "./styles.css";
 
 // customHook replication on useReducer() hook
+// the stateVariable declared inside customHOOk will belongs to the ReactComponent 
+// inside which it is called;
 function useMyReducer(reducerFunc, initialValue){
   const [state, setState] = useState(initialValue);
   function myDispatch(actionObject){
